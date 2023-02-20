@@ -7,7 +7,7 @@
 double ReadNumber(string messagTouser)
 {
     Console.WriteLine(messagTouser);
-    double value = double.Parse(Console.ReadLine());
+    double value = double.Parse(Console.ReadLine()!);
     return value;
 }
 
