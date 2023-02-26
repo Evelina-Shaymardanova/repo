@@ -14,5 +14,9 @@ int[] GetRandomArray(int length, int minValue, int maxValue)
     return array;
 }
 
-int [] myArray= GetRandomArray(8, 1, 100);
+int length = 8;
+int minValue = 1;
+int maxValue = 100;
+
+int [] myArray= GetRandomArray(length, minValue, maxValue);
 Console.WriteLine($"[{string.Join(", ", myArray)}]");
