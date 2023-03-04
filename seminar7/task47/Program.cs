@@ -7,10 +7,10 @@
 // 8 7,8 -7,1 9
 
 Console.WriteLine("Введите количество строк: ");
-int linesVol = Convert.ToInt32(Console.ReadLine());
+int lines = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите количество столбцов: ");
-int columnsVol = Convert.ToInt32(Console.ReadLine());
-double[,] numbers = new double[linesVol, columnsVol];
+int columns = Convert.ToInt32(Console.ReadLine());
+double[,] numbers = new double[lines, columns];
 
 void FillArrayRandomNumb(double[,] array)
 {
