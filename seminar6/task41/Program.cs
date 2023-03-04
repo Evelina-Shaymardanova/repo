@@ -10,7 +10,7 @@ int count = 0;
 do
 {
     Console.WriteLine("Введите любую строку и нажмите клавишу Enter: ");
-    userString = Console.ReadLine();
+    userString = Console.ReadLine()!;
     int value = Convert.ToInt32(userString);
 
     if (value > 0)

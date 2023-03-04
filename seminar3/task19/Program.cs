@@ -6,7 +6,7 @@
 // 23432 -> да
 
 Console.WriteLine("Введите число");
-string s = Console.ReadLine(); 
+string s = Console.ReadLine()!; 
 string reverse = ""; // здесь будет наша перевернутая строка
 for (int i = s.Length - 1; i >= 0; i--)
 {
