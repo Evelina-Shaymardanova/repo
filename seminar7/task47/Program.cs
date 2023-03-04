@@ -10,6 +10,10 @@ Console.WriteLine("Введите количество строк: ");
 int lines = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите количество столбцов: ");
 int columns = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите начало диапозона: ");
+int leftBorder = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите конец диапозона");
+int rightBorder = Convert.ToInt32(Console.ReadLine());
 double[,] numbers = new double[lines, columns];
 
 void FillArrayRandomNumb(double[,] array)
@@ -18,7 +22,7 @@ void FillArrayRandomNumb(double[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = Convert.ToDouble(new Random().Next(-10, 10));
+            array[i, j] = Convert.ToDouble(new Random().Next(leftBorder, rightBorder));
         }
     }
 }
