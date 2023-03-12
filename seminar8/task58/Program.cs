@@ -40,19 +40,6 @@ int[,] GetRandomMatrix (int rows, int colums, int leftBorder, int rightBorder)
     return matrix;
 }
 
-int[,] GetRandomArr (int rows, int colums, int leftBorder, int rightBorder)
-{
-    int [,] arr = new int[rows, colums];
-    for (int i = 0; i < arr.GetLength(0); i++)
-    {
-        for (int j = 0; j < arr.GetLength(1); j++)
-        {
-            arr[i, j] = Random.Shared.Next(leftBorder, rightBorder + 1);
-        }
-    }
-    return arr;
-}
-
 void PrintMatrix(int [,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -66,57 +53,38 @@ void PrintMatrix(int [,] matrix)
 
 }
 
-void PrintArray(int [,] arr)
-{
-    for (int i = 0; i < arr.GetLength(0); i++)
-    {
-        for (int j = 0; j < arr.GetLength(1); j++)
-        {
-            Console.Write(arr[i,j] + " ");
-        }
-        Console.WriteLine();
-    }
-
-}
-
 void PrintArrayMy(int[,] matrixarr)
 {
     for (int i = 0; i < matrixarr.GetLength(0); i++)
     {
-        Console.Write("[ ");
         for (int j = 0; j < matrixarr.GetLength(1); j++)
         {
             Console.Write(matrixarr[i, j] + " ");
         }
-        Console.Write("]");
         Console.WriteLine("");
     }
 }
- 
-
 
 int rows = ReadNumber("Введите число строк: ");
 int colums = ReadNumber("Введите число столбцов: ");
 int leftBorder = ReadNumber("Введите число левого края массива: ");
 int rightBorder = ReadNumber("Введите число правого края массива: ");
-int [,] matrixarr = new int [rows, colums];
 
-int [,] myArray = GetRandomArr(rows, colums, leftBorder, rightBorder);
+int [,] myArray = GetRandomMatrix(rows, colums, leftBorder, rightBorder);
 int[,] myMatrix = GetRandomMatrix(rows,colums,leftBorder,rightBorder);
 PrintMatrix(myMatrix);
 Console.WriteLine("\n\n");
-PrintArray(myArray);
+PrintMatrix(myArray);
 Console.WriteLine("Произведение двух матриц:");
-PrintArrayMy(matrixarr);
+Console.WriteLine();
+
+int [,] matrixarr = new int [rows, colums];
 
 for (int i = 0; i < rows; i++)
 {
     for (int j = 0; j < colums; j++)
     {
-        for (int z = 0; z < colums; z++)
-        {
-                matrixarr [i, j] = matrixarr[i, j] + (myMatrix[i, z] * myArray[z, j]);
-        }
+         matrixarr [i, j] = matrixarr[i, j] + (myMatrix[i, j] * myArray[i, j]);
     }
 }
-Console.Write(matrixarr);
+PrintArrayMy(matrixarr);
