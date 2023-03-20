@@ -4,13 +4,15 @@
 // 782 -> 2
 // 918 -> 8
 
-Console.WriteLine("Введите число: ");
+Console.WriteLine("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
+int length = number.ToString().Length;
 
-int numb = 0;
-if (99 < number || number < 999)
+if (length==3)
 {
-    numb = number % 10;
+    Console.WriteLine(number % 10);
 }
-
-Console.WriteLine(numb);
+else 
+{
+    Console.WriteLine("Число не является трехзначным!");
+}
