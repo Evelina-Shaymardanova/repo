@@ -9,17 +9,17 @@ Console.WriteLine("Введите число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите число для проверки на кратность: ");
-int b = Convert.ToInt32(Console.ReadLine());
+int b1 = Convert.ToInt32(Console.ReadLine());
 
 
 
-if (a % b == 0 )
+if (a % b1 == 0 )
 {
-    Console.WriteLine("Число:"+ " " + a + " " + "кратно: " + " "+ b);
+    Console.WriteLine("Число:"+ " " + a + " " + "кратно: " + " "+ b1);
 }
 
-else if (a % b != 0)
+else if (a % b1 != 0)
 {
-    Console.WriteLine("Число"+" " + a + " "+ "не кратно"+" " + b + " "+"остаток"+" "+ a % b);
+    Console.WriteLine("Число"+" " + a + " "+ "не кратно"+" " + b1 + " "+"остаток"+" "+ a % b1);
 }
 
