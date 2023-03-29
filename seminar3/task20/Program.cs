@@ -16,7 +16,7 @@ double bx = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Введите координаты точки b по оси y: ");
 double by = Convert.ToDouble(Console.ReadLine());
 
-Console.WriteLine(Math.Sqrt((ax-bx)*2+(ay-by)*2));
+Console.WriteLine(Math.Sqrt(Math.Pow(bx-ax, 2)+ Math.Pow(by-ay, 2)));
 
 // import math
 // distans = math.sqrt((ax-bx)**2+(ay-by)**2)
